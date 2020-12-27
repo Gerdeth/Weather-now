@@ -10,5 +10,14 @@ body{
     justify-content:center;
     flex-direction: column;
     align-items:center;
-    background:linear-gradient(rgd(47,150,163),rgd(48,62,143));
+    background:linear-gradient(rgb(47,150,163),rgb(48,62,143));
+    font-family:sans-serif;
+    color:white;
+}
+.location{
+    height:30vh;
+    width:50%;
+    display:flex;
+    justify-content: space space-around;
+    align-items:center;
 }
