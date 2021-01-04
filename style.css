@@ -15,8 +15,14 @@ body{
     color:white;
 }
 .location{
-    height:30vh;
-    width:50%;
+   
+    display:flex;
+    justify-content: space space-around;
+    align-items:center;
+}
+.temperature{
+   
+
     display:flex;
     justify-content: space space-around;
     align-items:center;
