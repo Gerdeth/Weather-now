@@ -15,7 +15,7 @@ window.addEventListener('load', ()=>{
             lat=position.coords.latitude;
        
     
-        const api =`https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=dd9cf3aa3b8d4051bcb9057f6e286ad8`
+        const api =`https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=dd9cf3aa3b8d4051bcb9057f6e286ad8&units=I`
         fetch(api)
             .then(response => {
                 return response.json();
@@ -25,7 +25,8 @@ window.addEventListener('load', ()=>{
                 temperatureDegree.textContent = data.data[0].temp;
                 cityName.textContent= data.data[0].city_name;
                 temperatureDescription.textContent= data.data[0].weather.description;
-                // weatherIcon.textContent=data.data[0].weather.icon;
+                weatherIcon.textContent=data.data[0].weather.description;
+                
             //    let iconAnimation = data.data[0].weather.icon;
             //     setIcons(iconAnimation, document.querySelector('.icon'))
 
@@ -34,9 +35,9 @@ window.addEventListener('load', ()=>{
         });
 }
 // function setIcons(icon, iconID){
-//     // const iconAnimation = data.data[0].weather.icon;
+//     // const iconAnimation = data.data[0].weather.description;
 //     const skycons= new Skycons ({color:"white"});
-//     const currentIcon= iconAnimation.toUpperCase();
+//     const currentIcon= weatherIcon.toUpperCase();
 //     skycons.play();
 //     return skycons.set(iconId, Skycons[currentIcon]);
 // }
