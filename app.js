@@ -22,23 +22,19 @@ window.addEventListener('load', ()=>{
             })
             .then(data => {
                 console.log(data);
-                temperatureDegree.textContent = data.data[0].temp;
-                cityName.textContent= data.data[0].city_name;
-                temperatureDescription.textContent= data.data[0].weather.description;
-                weatherIcon.textContent=data.data[0].weather.description;
+                const{temp,city_name,weather}= data.data[0];
+                temperatureDegree.textContent = temp;
+                cityName.textContent= city_name;
+                temperatureDescription.textContent= weather.description;
+            
                 
-            //    let iconAnimation = data.data[0].weather.icon;
-            //     setIcons(iconAnimation, document.querySelector('.icon'))
-
+         
+                
             
             });
         });
-}
-// function setIcons(icon, iconID){
-//     // const iconAnimation = data.data[0].weather.description;
-//     const skycons= new Skycons ({color:"white"});
-//     const currentIcon= weatherIcon.toUpperCase();
-//     skycons.play();
-//     return skycons.set(iconId, Skycons[currentIcon]);
-// }
+    }
+    
+
+    
 });
